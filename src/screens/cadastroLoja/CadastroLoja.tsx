@@ -1,13 +1,6 @@
 import React from 'react';
 import { 
-  View, 
-  Text, 
-  TextInput, 
-  TouchableOpacity, 
-  ScrollView, 
-  KeyboardAvoidingView, 
-  Platform 
-} from 'react-native';
+  View, Text, TextInput, TouchableOpacity, ScrollView, KeyboardAvoidingView, Platform } from 'react-native';
 
 import { styles } from './CastroLojaStyles';
 import { useCadastroLoja } from '../../hooks/useCadastroLoja';
@@ -18,7 +11,6 @@ export default function CadastroLoja() {
   return (
     <KeyboardAvoidingView
       style={styles.container}
-      // Ajuste de comportamento para o teclado não cobrir o input
       behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
     >
       <ScrollView contentContainerStyle={styles.scrollContent}>
