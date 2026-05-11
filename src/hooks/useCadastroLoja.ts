@@ -3,7 +3,6 @@ import { useNavigation } from '@react-navigation/native';
 import { Alert } from 'react-native';
 import { Loja } from '../@types/loja';
 
-// Criamos um tipo para o formulário que omite o ID
 type FormData = Omit<Loja, 'id'>;
 
 export function useCadastroLoja() {
@@ -27,10 +26,15 @@ export function useCadastroLoja() {
       return;
     }
 
-    // Simulação de salvamento 
     console.log('Enviando para o servidor:', formData);
 
     Alert.alert('Sucesso', 'Local cadastrado com sucesso!');
     navigation.goBack();
+  };
+
+  return {
+    formData,
+    updateField,
+    handleSalvar
   };
 }
