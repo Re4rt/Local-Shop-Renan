@@ -15,6 +15,27 @@ export const styles = StyleSheet.create({
   },
   list: {
     paddingHorizontal: 20,
+  },
+  
+  buttonCadastro: {
+  position: 'absolute',
+  right: 20,
+  bottom: 30,
+  width: 60,
+  height: 60,
+  borderRadius: 30,
+  backgroundColor: '#27ae60',
+  alignItems: 'center',
+  justifyContent: 'center',
+  elevation: 5,         
+  zIndex: 10,           
+  shadowColor: '#000',
+  
+},
+  buttonText: {
+    color: '#fff',
+    fontSize: 32,
+    lineHeight: 34,
   }
 });
 

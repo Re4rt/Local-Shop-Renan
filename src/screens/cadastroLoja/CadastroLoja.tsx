@@ -1,11 +1,9 @@
 import React from 'react';
-import { view, Text, TextInput, TouchableOpacity, ScrollView, KeyboardAvoidingView, Platform } from 'react-native';
+import { 
+  View, Text, TextInput, TouchableOpacity, ScrollView, KeyboardAvoidingView, Platform } from 'react-native';
 
 import { styles } from './CastroLojaStyles';
 import { useCadastroLoja } from '../../hooks/useCadastroLoja';
-import {keyboardAvoidingView} from 'react-native/types_generated/index';
-import {ScrollView, TextInput} from 'react-native-gesture-handler';
-
 
 export default function CadastroLoja() {
   const { formData, updateField, handleSalvar } = useCadastroLoja();
@@ -29,7 +27,7 @@ export default function CadastroLoja() {
         <Text style={styles.label}>Categoria *</Text>
         <TextInput
           style={styles.input}
-          placeholder="Ex: Categoria"
+          placeholder="Ex: Restaurante"
           value={formData.categoria}
           onChangeText={(v) => updateField('categoria', v)}
         />
@@ -45,7 +43,7 @@ export default function CadastroLoja() {
         <Text style={styles.label}>URL da Imagem</Text>
         <TextInput
           style={styles.input}
-          placeholder="Ex: https://link-da-imagem.com/imagem.jpg"
+          placeholder="https://link-da-imagem.com"
           keyboardType="url"
           autoCapitalize="none"
           value={formData.imagem}
@@ -55,7 +53,7 @@ export default function CadastroLoja() {
         <Text style={styles.label}>Descrição</Text>
         <TextInput
           style={[styles.input, styles.textArea]}
-          placeholder="Escreva uma descrição do local"
+          placeholder="Escreva uma descrição"
           value={formData.descricao}
           onChangeText={(v) => updateField('descricao', v)}
           multiline
